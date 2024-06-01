@@ -1,0 +1,29 @@
+{
+    "id": "8B97B095",
+    "path": "~/proj/r/lab9/script.R",
+    "project_path": "script.R",
+    "type": "r_source",
+    "hash": "765127468",
+    "contents": "",
+    "dirty": false,
+    "created": 1714453565725.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "112,19",
+        "scrollLine": "92",
+        "marks": "<:105,38\n>:113,1",
+        "useRainbowParens": "true",
+        "docOutlineVisible": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1714458459,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1714458459551,
+    "read_only": false,
+    "read_only_alternatives": []
+}

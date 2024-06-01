@@ -1,0 +1,27 @@
+{
+    "id": "14A24EBB",
+    "path": "~/proj/r/lab12/main.R",
+    "project_path": "main.R",
+    "type": "r_source",
+    "hash": "3901928982",
+    "contents": "",
+    "dirty": false,
+    "created": 1716873032804.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "28,17",
+        "scrollLine": "7",
+        "marks": "<:24,0\n>:24,0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1716877167,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1716877167180,
+    "read_only": false,
+    "read_only_alternatives": []
+}

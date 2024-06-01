@@ -1,0 +1,27 @@
+{
+    "id": "F4748C51",
+    "path": "~/proj/r/lab10/main.R",
+    "project_path": "main.R",
+    "type": "r_source",
+    "hash": "493413827",
+    "contents": "",
+    "dirty": false,
+    "created": 1715662477264.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "104,0",
+        "scrollLine": "88",
+        "marks": "<:104,25\n>:108,25"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1716272891,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1716272891286,
+    "read_only": false,
+    "read_only_alternatives": []
+}
