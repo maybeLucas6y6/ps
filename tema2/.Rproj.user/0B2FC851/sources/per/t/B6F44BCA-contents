@@ -15,11 +15,28 @@ ex_B1 = function(N) {
     return(v);
 }
 
-s = 2 * pi^2 * R * r^2;
-print("Eroare volum tor");
-print(abs(s - ex_B1(10000)) / s);
-print(abs(s - ex_B1(20000)) / s);
-print(abs(s - ex_B1(50000)) / s);
+print("Ex B1")
+print("Valoare exacta volum tor");
+valoare_exacta = 2 * pi^2 * R * r^2;
+print(valoare_exacta);
+
+print("Valoare calculata pentru volumul torului cu esantion de dimensiune 10000")
+v = ex_B1(10000);
+print(v);
+print("Eroare relativa");
+print(abs(s - v) / valoare_exacta);
+
+print("Valoare calculata pentru volumul torului cu esantion de dimensiune 20000")
+v = ex_B1(20000);
+print(v);
+print("Eroare relativa");
+print(abs(s - v) / valoare_exacta);
+
+print("Valoare calculata pentru volumul torului cu esantion de dimensiune 50000")
+v = ex_B1(50000);
+print(v);
+print("Eroare relativa");
+print(abs(s - v) / valoare_exacta);
 
 ex_B2 = function(N) {
     nc = 0;
@@ -32,8 +49,10 @@ ex_B2 = function(N) {
     }
     return((nc/N) * 6);
 }
-print("arie triunghi: ")
+print("Ex B2")
+print("Arie triunghi: ")
 print(ex_B2(20000))
+print("Valoarea exacta este 2.4")
 
 ex_B3_a = function(N) {
     sum = 0;
@@ -74,5 +93,59 @@ ex_B3_c = function(N, lambda){
 }
 ex_B3_c(10000, 1);
 
-# ex_B4 inca nu stiu
-#ex_B4 = function()
+# ex_B4 
+
+years_until_target = function(initial_users, target_users, n, p, q) {
+    years = 0;
+    current_users = initial_users;
+    while (current_users < target_users) {
+        new_users = rbinom(1, n, p);
+        leaving_users = current_users * q; 
+        current_users = current_users + new_users - leaving_users;
+        years = years + 1;
+    }
+    return(years);
+}
+
+ex_B4_a = function(k) {
+    initial_users = 10000;
+    target_users = 15000;
+    n = 1000;
+    p = 0.25;
+    q = 0.01;
+    
+    vals = vector();
+    for (i in 1:k) {
+        vals[i] = years_until_target(initial_users, target_users, n, p, q);
+    }
+    return(mean(vals));
+}
+
+print("Ani necesari pt atingerea target-ului de 15000")
+print(ex_B4_a(10000))
+
+ex_B4_b = function(k) {
+    s = 0;
+    target_years = 40 + 10 / 12;
+    for (i in 1:k) {
+        if (years_until_target(10000, 15000, 1000, 0.25, 0.01) <= target_years) {
+            s = s + 1;
+        }
+    }
+    return(s / k);
+}
+
+print("Probabilitatea ceruta")
+print(ex_B4_b(10000));
+
+ex_B4_c = function() {
+    alfa = 1 - 0.99;
+    z = qnorm(alfa / 2);
+    epsilon = 0.01;
+    p = 0.246;
+    n_min = p * (1 - p) * (z / epsilon) ^ 2;
+    return(ex_B4_b(n_min + 1));
+}
+
+print("Estimare");
+print(ex_B4_c())

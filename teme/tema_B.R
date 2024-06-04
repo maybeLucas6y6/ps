@@ -93,8 +93,6 @@ ex_B3_c = function(N, lambda){
 }
 ex_B3_c(10000, 1);
 
-# ex_B4 
-
 years_until_target = function(initial_users, target_users, n, p, q) {
     years = 0;
     current_users = initial_users;
@@ -144,7 +142,7 @@ ex_B4_c = function() {
     epsilon = 0.01;
     p = 0.246;
     n_min = p * (1 - p) * (z / epsilon) ^ 2;
-    return(ex_B4_b(n_min + 1));
+    return(ex_B4_b(n_min));
 }
 
 print("Estimare");
